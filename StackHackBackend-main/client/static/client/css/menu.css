@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -78,14 +78,14 @@ p {
   color: #2a2a2a;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
- background-color: rgba(255, 255, 255, .15);  
+ background-color: rgba(255, 255, 255, .15);
  backdrop-filter: blur(5px);
   font-family: 'Poppins', sans-serif;
 }
@@ -167,17 +167,17 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 .section-heading h2 {
   line-height: 40px;
   margin-top: 20px;
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
   font-size: 30px;
   font-weight: 900;
   color: #2a2a2a;
 }
 
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -669,6 +669,73 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     transform: translate(-50%, -50%);
 }
 
+/*
+---------------------------------------------
+footer
+---------------------------------------------
+*/
+
+footer {
+  margin-top: 60px;
+  padding: 50px 0px;
+   background-color: #772f1a;
+background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+
+}
+
+footer .left-text-content p {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 14px;
+  text-align: right;
+}
+
+footer .right-text-content p {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+
+footer .right-text-content {
+  text-align: left;
+  margin-top: 10px;
+}
+
+footer .logo {
+  text-align: center;
+}
+
+footer .right-text-content ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+footer .right-text-content ul li:first-child {
+  margin-left: 0px;
+}
+
+
+footer .right-text-content ul li a {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  font-size: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  color:#FAB348;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+footer .right-text-content ul li a:hover {
+  color: #2a2a2a;
+}
+
 
 
 
@@ -794,11 +861,11 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     font-weight: 800;
   }
   .menu_content h4 span{
-    font-size: 20px;
+    font-size: 15px;
   }
   .menu_content p{
     font-size:13px;
-    font-weight: 500px;
+    font-weight: 500;
   }
 }
 .btn-add{
@@ -806,21 +873,21 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 color: brown;
 border-color: transparent;
 font-weight: 800;
-font-size:25px;
+font-size:20px;
 border-radius: 50%;
 text-align: center;
 }
 .btn-add:hover{
   border-color: transparent;
-    background-color:transparent;
-    color: brown;
+    background-color:white;
+    color: red;
 
 }
 
 @media (max-width: 992px) {
   #top {
     padding-top: 100px;
-  
+
   }
   .header-area .main-nav .nav li.submenu:after {
     right: 3px;
