@@ -23,16 +23,16 @@ Table of contents
 12. portfolio
 
 --------------------------------------------- */
-/*
+/* 
 ---------------------------------------------
 font & reset css
----------------------------------------------
+--------------------------------------------- 
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-/*
+/* 
 ---------------------------------------------
 reset
----------------------------------------------
+--------------------------------------------- 
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -108,14 +108,14 @@ p {
   color: #2a2a2a;
 }
 
-/*
+/* 
 ---------------------------------------------
 global styles
----------------------------------------------
+--------------------------------------------- 
 */
 html,
 body {
- background-color: rgba(255, 255, 255, .15);
+ background-color: rgba(255, 255, 255, .15);  
  backdrop-filter: blur(5px);
   font-family: 'Poppins', sans-serif;
 }
@@ -175,13 +175,14 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }
 
 .section-heading h6 {
+  text-align: center;
   position: relative;
   font-size: 15px;
  color:#FAB348;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding-left: 40px;
+  
 }
 
 .section-heading h6:before {
@@ -191,23 +192,23 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
   position: absolute;
   left: 0;
   top: 8px;
-  background-color: #fb5849;
 }
 
 .section-heading h2 {
+  text-align: center;
   line-height: 40px;
   margin-top: 20px;
-  margin-bottom: 25px;
-  font-size: 30px;
-  font-weight: 900;
+  margin-bottom: 25px; 
+  font-size: 25px;
+  font-weight: 600;
   color: #2a2a2a;
 }
 
 
-/*
+/* 
 ---------------------------------------------
 header
----------------------------------------------
+--------------------------------------------- 
 */
 
 .background-header {
@@ -519,9 +520,9 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
   background-color: #1e1e1e;
 }
 
-.header-area.header-sticky {
+.header-area .header-sticky {
 
-  min-height: 80px;
+  min-height: 40px;
 }
 
 .header-area .nav {
@@ -722,7 +723,7 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
   /* border: 1px solid #3079ed; */
   border: 0px;
   color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1);
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
   background-color: #4d90fe;
   padding: 17px 0px;
   font-family: roboto;
@@ -746,16 +747,16 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
   display: inline-block;
   opacity: 0.6;
   transition: opacity ease 0.5s;
-}
+} 
 
 .login-help{
   font-size: 12px;
 }
 
-/*
+/* 
 ---------------------------------------------
 banner
----------------------------------------------
+--------------------------------------------- 
 */
 
 #top {
@@ -767,13 +768,11 @@ banner
 #top .col-lg-8 {
   padding: 0px;
 }
-/*rotating effect */
-.flip-container {
-  perspective: 1000px;
-  align-items: center;
-background-color: #000000;
-background-image: linear-gradient(315deg, #000000 0%, #a55c1b 74%);
 
+#top .left-content {
+   background-color:#FAB348;
+background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -781,32 +780,22 @@ background-image: linear-gradient(315deg, #000000 0%, #a55c1b 74%);
   width: 100%;
   height: 100%;
 }
-.flipper {
 
-  width: 300px;
-  height:500px;
-  background-color: #a55c1b;
-background-image: linear-gradient(315deg, #a55c1b 0%, #000000 74%);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    position: absolute;
-  top: 15%;
-
-  left: 20%;
-  transform: translateZ(50px);
-  transition: 0.6s;
-
-  transform-style: preserve-3d;
+#top .left-content .inner-content {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
-.front h1{
+
+#top .left-content h4 {
   font-family: 'Dancing Script', cursive;
   color: #fff;
-  font-size: 40px;
+  font-size: 54px;
   font-weight: 700;
-
 }
-.front p{
+
+#top .left-content h6 {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
@@ -814,62 +803,15 @@ background-image: linear-gradient(315deg, #a55c1b 0%, #000000 74%);
   letter-spacing: 3px;
   margin-top: 5px;
 }
-.front, .back {
-  /*background-color: rgba(0,0,0,.3);*/
-  position: absolute;
-    padding:10px 30px;
-  top: 0;
-  left: 0;
-  right: 0;
 
-  backface-visibility: hidden;
-}
-.front{
-  padding-top: 80px;
-  text-align: center;
+#top .left-content .main-white-button  {
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
-.front{
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
+#top .left-content .main-white-button a {
+  display: inline-block;
 }
-#loginButton{
-  padding: 5px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 0%;
-  margin-top: 40px;
-  color: #FAB54D;
-}
-.back{
-    transform: rotateY(180deg);
-}
-.flip{
-    transform: rotateY(180deg);
-}
-input{
-    width:100%;
-    margin-bottom:15px;
-    height:40px;
-    box-sizing: border-box;
-    padding:10px;
-}
-
-.title{
-  text-align: center;
-}
-.flipbutton{
-    color:#4096ee;
-    text-decoration:none;
-    text-align:left !important;
-
-}
-
-/*rotating effect ends*/
-
-
 
 /* ==== Main CSS === */
 .img-fill{
@@ -1015,6 +957,113 @@ ul.slick-dots {
 
 
 /*my code */
+.flip-container {
+  perspective: 1000;
+  align-items: center;
+background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #a55c1b 74%);
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.flipper {
+
+  width: 300px;
+  height:500px;
+  background-color: #a55c1b;
+background-image: linear-gradient(315deg, #a55c1b 0%, #000000 74%);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    position: absolute;
+  top: 15%;
+  
+  left: 20%;
+  transform: translateZ(50px);
+  transition: 0.6s;
+
+  transform-style: preserve-3d;
+}
+.front h1{
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+
+}
+.front p{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+.front, .back {
+  /*background-color: rgba(0,0,0,.3);*/
+  position: absolute;
+    padding:10px 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  backface-visibility: hidden;
+}
+.front{
+  padding-top: 80px;
+  text-align: center;
+}
+
+.front{
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+#loginButton{
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0%;
+  margin-top: 40px;
+  color: #FAB54D;
+}
+#logButton{
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0%;
+  margin-top: 40px;
+  color: #FAB54D;
+}
+.back{
+    transform: rotateY(180deg);
+}
+.flip{
+    transform: rotateY(180deg);
+}
+input{
+    width:100%;
+    margin-bottom:15px;
+    height:40px;
+    box-sizing: border-box;
+    padding:10px;
+}
+
+.title{
+  text-align: center;
+}
+.flipbutton{
+    color:#4096ee;
+    text-decoration:none;
+    text-align:left !important;
+
+}
 
 
 /* code ends */
@@ -1033,7 +1082,7 @@ about
 }
 
 #about .section-heading h2 {
-  padding-right: 120px;
+  
 }
 #about .section-heading h6{
   color:#FAB348;
@@ -1046,9 +1095,12 @@ about
 
 #about .left-text-content p {
   margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 #about .right-content {
+
   margin-left: 30px;
 }
 
@@ -1192,7 +1244,7 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 #menu .owl-dots {
   display: none;
 }
-
+    
 #menu .owl-nav .owl-prev{
   margin-right: 10px;
   outline: none;
@@ -1270,6 +1322,9 @@ chefs
 #chefs .section-heading h6 {
   padding-left: 0px;
   color:#FAB348;
+}
+#chefs .section-heading h6{
+  text-align: center;
 }
 
 #chefs .section-heading h6:before {
@@ -1376,10 +1431,10 @@ chefs
 }
 
 
-/*
+/* 
 ---------------------------------------------
 reservation
----------------------------------------------
+--------------------------------------------- 
 */
 
 #reservation .section-heading {
@@ -1387,7 +1442,7 @@ reservation
 }
 
 #reservation .section-heading h6 {
-
+   
 color:#FAB348;
 }
 
@@ -1669,10 +1724,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }
 
 
-/*
+/* 
 ---------------------------------------------
 footer
----------------------------------------------
+--------------------------------------------- 
 */
 
 footer {
@@ -1736,16 +1791,16 @@ footer .right-text-content ul li a:hover {
   color: #2a2a2a;
 }
 
-/*
+/* 
 ---------------------------------------------
 responsive
----------------------------------------------
+--------------------------------------------- 
 */
 
 @media (max-width: 992px) {
   #top {
     padding-top: 100px;
-
+  
   }
   .header-area .main-nav .nav li.submenu:after {
     right: 3px;
@@ -1810,7 +1865,7 @@ responsive
 
 #preloader {
   overflow: hidden;
-
+  
 background-color: #772f1a;
 background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 
@@ -1891,15 +1946,16 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }
 
 
-
-
+/*==================
+  TESTIMONIAL SECTION
+====================*/
 
 
 
 .testim {
-  margin-top: 15%;
+  margin-top: 13%;
     width: 100%;
-    margin-bottom: -150px;
+    margin-bottom: -240px;
     background:#000;
     background-attachment: fixed;
     position: relative;
@@ -1930,10 +1986,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    -webkit-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;    
+    -ms-transition: all .3s ease-in-out;    
+    -moz-transition: all .3s ease-in-out;    
+    -o-transition: all .3s ease-in-out;    
     transition: all .3s ease-in-out;
     padding: 5px;
     z-index: 22222222;
@@ -1946,7 +2002,7 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 .testim .arrow:hover {
     color: #ea830e;
 }
-
+    
 
 .testim .arrow.left {
     left: 10px;
@@ -1976,10 +2032,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     border: 1px solid #eee;
     margin: 0 10px;
     cursor: pointer;
-    -webkit-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;    
+    -ms-transition: all .5s ease-in-out;    
+    -moz-transition: all .5s ease-in-out;    
+    -o-transition: all .5s ease-in-out;    
     transition: all .5s ease-in-out;
     position: relative;
 }
@@ -1991,13 +2047,13 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }
 
 .testim .dots .dot.active {
-    -webkit-animation: testim-scale .5s ease-in-out forwards;
-    -moz-animation: testim-scale .5s ease-in-out forwards;
-    -ms-animation: testim-scale .5s ease-in-out forwards;
-    -o-animation: testim-scale .5s ease-in-out forwards;
-    animation: testim-scale .5s ease-in-out forwards;
+    -webkit-animation: testim-scale .5s ease-in-out forwards;   
+    -moz-animation: testim-scale .5s ease-in-out forwards;   
+    -ms-animation: testim-scale .5s ease-in-out forwards;   
+    -o-animation: testim-scale .5s ease-in-out forwards;   
+    animation: testim-scale .5s ease-in-out forwards;   
 }
-
+    
 .testim .cont {
     position: relative;
     overflow: hidden;
@@ -2015,13 +2071,13 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 .testim .cont > div.inactive {
     opacity: 1;
 }
-
+    
 
 .testim .cont > div.active {
     position: relative;
     opacity: 1;
 }
-
+    
 
 .testim .cont div .img img {
     display: block;
@@ -2045,51 +2101,51 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }
 
 .testim .cont div.active .img img {
-    -webkit-animation: testim-show .5s ease-in-out forwards;
-    -moz-animation: testim-show .5s ease-in-out forwards;
-    -ms-animation: testim-show .5s ease-in-out forwards;
-    -o-animation: testim-show .5s ease-in-out forwards;
-    animation: testim-show .5s ease-in-out forwards;
+    -webkit-animation: testim-show .5s ease-in-out forwards;            
+    -moz-animation: testim-show .5s ease-in-out forwards;            
+    -ms-animation: testim-show .5s ease-in-out forwards;            
+    -o-animation: testim-show .5s ease-in-out forwards;            
+    animation: testim-show .5s ease-in-out forwards;            
 }
 
 .testim .cont div.active h2 {
-    -webkit-animation: testim-content-in .4s ease-in-out forwards;
-    -moz-animation: testim-content-in .4s ease-in-out forwards;
-    -ms-animation: testim-content-in .4s ease-in-out forwards;
-    -o-animation: testim-content-in .4s ease-in-out forwards;
-    animation: testim-content-in .4s ease-in-out forwards;
+    -webkit-animation: testim-content-in .4s ease-in-out forwards;    
+    -moz-animation: testim-content-in .4s ease-in-out forwards;    
+    -ms-animation: testim-content-in .4s ease-in-out forwards;    
+    -o-animation: testim-content-in .4s ease-in-out forwards;    
+    animation: testim-content-in .4s ease-in-out forwards;    
 }
 
 .testim .cont div.active p {
-    -webkit-animation: testim-content-in .5s ease-in-out forwards;
-    -moz-animation: testim-content-in .5s ease-in-out forwards;
-    -ms-animation: testim-content-in .5s ease-in-out forwards;
-    -o-animation: testim-content-in .5s ease-in-out forwards;
-    animation: testim-content-in .5s ease-in-out forwards;
+    -webkit-animation: testim-content-in .5s ease-in-out forwards;    
+    -moz-animation: testim-content-in .5s ease-in-out forwards;    
+    -ms-animation: testim-content-in .5s ease-in-out forwards;    
+    -o-animation: testim-content-in .5s ease-in-out forwards;    
+    animation: testim-content-in .5s ease-in-out forwards;    
 }
 
 .testim .cont div.inactive .img img {
-    -webkit-animation: testim-hide .5s ease-in-out forwards;
-    -moz-animation: testim-hide .5s ease-in-out forwards;
-    -ms-animation: testim-hide .5s ease-in-out forwards;
-    -o-animation: testim-hide .5s ease-in-out forwards;
-    animation: testim-hide .5s ease-in-out forwards;
+    -webkit-animation: testim-hide .5s ease-in-out forwards;            
+    -moz-animation: testim-hide .5s ease-in-out forwards;            
+    -ms-animation: testim-hide .5s ease-in-out forwards;            
+    -o-animation: testim-hide .5s ease-in-out forwards;            
+    animation: testim-hide .5s ease-in-out forwards;            
 }
 
 .testim .cont div.inactive h2 {
-    -webkit-animation: testim-content-out .4s ease-in-out forwards;
-    -moz-animation: testim-content-out .4s ease-in-out forwards;
-    -ms-animation: testim-content-out .4s ease-in-out forwards;
-    -o-animation: testim-content-out .4s ease-in-out forwards;
-    animation: testim-content-out .4s ease-in-out forwards;
+    -webkit-animation: testim-content-out .4s ease-in-out forwards;        
+    -moz-animation: testim-content-out .4s ease-in-out forwards;        
+    -ms-animation: testim-content-out .4s ease-in-out forwards;        
+    -o-animation: testim-content-out .4s ease-in-out forwards;        
+    animation: testim-content-out .4s ease-in-out forwards;        
 }
 
 .testim .cont div.inactive p {
-    -webkit-animation: testim-content-out .5s ease-in-out forwards;
-    -moz-animation: testim-content-out .5s ease-in-out forwards;
-    -ms-animation: testim-content-out .5s ease-in-out forwards;
-    -o-animation: testim-content-out .5s ease-in-out forwards;
-    animation: testim-content-out .5s ease-in-out forwards;
+    -webkit-animation: testim-content-out .5s ease-in-out forwards;    
+    -moz-animation: testim-content-out .5s ease-in-out forwards;    
+    -ms-animation: testim-content-out .5s ease-in-out forwards;    
+    -o-animation: testim-content-out .5s ease-in-out forwards;    
+    animation: testim-content-out .5s ease-in-out forwards;    
 }
 
 @-webkit-keyframes testim-scale {
@@ -2099,18 +2155,18 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     }
 
     35% {
-        -webkit-box-shadow: 0px 0px 10px 5px #eee;
-        box-shadow: 0px 0px 10px 5px #eee;
+        -webkit-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
     }
 
     70% {
-        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;
-        box-shadow: 0px 0px 10px 5px #ea830e;
+        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
     }
 
     100% {
-        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;
-        box-shadow: 0px 0px 0px 0px #ea830e;
+        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
     }
 }
 
@@ -2121,18 +2177,18 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     }
 
     35% {
-        -moz-box-shadow: 0px 0px 10px 5px #eee;
-        box-shadow: 0px 0px 10px 5px #eee;
+        -moz-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
     }
 
     70% {
-        -moz-box-shadow: 0px 0px 10px 5px #ea830e;
-        box-shadow: 0px 0px 10px 5px #ea830e;
+        -moz-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
     }
 
     100% {
-        -moz-box-shadow: 0px 0px 0px 0px #ea830e;
-        box-shadow: 0px 0px 0px 0px #ea830e;
+        -moz-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
     }
 }
 
@@ -2143,18 +2199,18 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     }
 
     35% {
-        -ms-box-shadow: 0px 0px 10px 5px #eee;
-        box-shadow: 0px 0px 10px 5px #eee;
+        -ms-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
     }
 
     70% {
-        -ms-box-shadow: 0px 0px 10px 5px #ea830e;
-        box-shadow: 0px 0px 10px 5px #ea830e;
+        -ms-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
     }
 
     100% {
-        -ms-box-shadow: 0px 0px 0px 0px #ea830e;
-        box-shadow: 0px 0px 0px 0px #ea830e;
+        -ms-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
     }
 }
 
@@ -2165,18 +2221,18 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     }
 
     35% {
-        -o-box-shadow: 0px 0px 10px 5px #eee;
-        box-shadow: 0px 0px 10px 5px #eee;
+        -o-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
     }
 
     70% {
-        -o-box-shadow: 0px 0px 10px 5px #ea830e;
-        box-shadow: 0px 0px 10px 5px #ea830e;
+        -o-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
     }
 
     100% {
-        -o-box-shadow: 0px 0px 0px 0px #ea830e;
-        box-shadow: 0px 0px 0px 0px #ea830e;
+        -o-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
     }
 }
 
@@ -2186,15 +2242,15 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
     }
 
     35% {
-        box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;        
     }
 
     70% {
-        box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;        
     }
 
     100% {
-        box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;        
     }
 }
 
@@ -2204,11 +2260,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -webkit-transform: translateY(100%);
         transform: translateY(100%);
     }
-
+    
     to {
         opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        -webkit-transform: translateY(0);        
+        transform: translateY(0);        
     }
 }
 
@@ -2218,11 +2274,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -moz-transform: translateY(100%);
         transform: translateY(100%);
     }
-
+    
     to {
         opacity: 1;
-        -moz-transform: translateY(0);
-        transform: translateY(0);
+        -moz-transform: translateY(0);        
+        transform: translateY(0);        
     }
 }
 
@@ -2232,11 +2288,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -ms-transform: translateY(100%);
         transform: translateY(100%);
     }
-
+    
     to {
         opacity: 1;
-        -ms-transform: translateY(0);
-        transform: translateY(0);
+        -ms-transform: translateY(0);        
+        transform: translateY(0);        
     }
 }
 
@@ -2246,11 +2302,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -o-transform: translateY(100%);
         transform: translateY(100%);
     }
-
+    
     to {
         opacity: 1;
-        -o-transform: translateY(0);
-        transform: translateY(0);
+        -o-transform: translateY(0);        
+        transform: translateY(0);        
     }
 }
 
@@ -2259,10 +2315,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         opacity: 0;
         transform: translateY(100%);
     }
-
+    
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0);        
     }
 }
 
@@ -2272,11 +2328,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
-
+    
     to {
         opacity: 0;
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);        
+        transform: translateY(-100%);        
     }
 }
 
@@ -2286,11 +2342,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -moz-transform: translateY(0);
         transform: translateY(0);
     }
-
+    
     to {
         opacity: 0;
-        -moz-transform: translateY(-100%);
-        transform: translateY(-100%);
+        -moz-transform: translateY(-100%);        
+        transform: translateY(-100%);        
     }
 }
 
@@ -2300,11 +2356,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -ms-transform: translateY(0);
         transform: translateY(0);
     }
-
+    
     to {
         opacity: 0;
-        -ms-transform: translateY(-100%);
-        transform: translateY(-100%);
+        -ms-transform: translateY(-100%);        
+        transform: translateY(-100%);        
     }
 }
 
@@ -2314,11 +2370,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -o-transform: translateY(0);
         transform: translateY(0);
     }
-
+    
     to {
         opacity: 0;
-        transform: translateY(-100%);
-        transform: translateY(-100%);
+        transform: translateY(-100%);        
+        transform: translateY(-100%);        
     }
 }
 
@@ -2327,10 +2383,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         opacity: 1;
         transform: translateY(0);
     }
-
+    
     to {
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateY(-100%);        
     }
 }
 
@@ -2340,11 +2396,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -webkit-transform: scale(0);
         transform: scale(0);
     }
-
+    
     to {
         opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        -webkit-transform: scale(1);       
+        transform: scale(1);       
     }
 }
 
@@ -2354,11 +2410,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -moz-transform: scale(0);
         transform: scale(0);
     }
-
+    
     to {
         opacity: 1;
-        -moz-transform: scale(1);
-        transform: scale(1);
+        -moz-transform: scale(1);       
+        transform: scale(1);       
     }
 }
 
@@ -2368,11 +2424,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -ms-transform: scale(0);
         transform: scale(0);
     }
-
+    
     to {
         opacity: 1;
-        -ms-transform: scale(1);
-        transform: scale(1);
+        -ms-transform: scale(1);       
+        transform: scale(1);       
     }
 }
 
@@ -2382,11 +2438,11 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         -o-transform: scale(0);
         transform: scale(0);
     }
-
+    
     to {
         opacity: 1;
-        -o-transform: scale(1);
-        transform: scale(1);
+        -o-transform: scale(1);       
+        transform: scale(1);       
     }
 }
 
@@ -2395,20 +2451,20 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
         opacity: 0;
         transform: scale(0);
     }
-
+    
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1);       
     }
 }
 
 @-webkit-keyframes testim-hide {
     from {
         opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        -webkit-transform: scale(1);       
+        transform: scale(1);       
     }
-
+    
     to {
         opacity: 0;
         -webkit-transform: scale(0);
@@ -2419,10 +2475,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 @-moz-keyframes testim-hide {
     from {
         opacity: 1;
-        -moz-transform: scale(1);
-        transform: scale(1);
+        -moz-transform: scale(1);       
+        transform: scale(1);       
     }
-
+    
     to {
         opacity: 0;
         -moz-transform: scale(0);
@@ -2433,10 +2489,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 @-ms-keyframes testim-hide {
     from {
         opacity: 1;
-        -ms-transform: scale(1);
-        transform: scale(1);
+        -ms-transform: scale(1);       
+        transform: scale(1);       
     }
-
+    
     to {
         opacity: 0;
         -ms-transform: scale(0);
@@ -2447,10 +2503,10 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 @-o-keyframes testim-hide {
     from {
         opacity: 1;
-        -o-transform: scale(1);
-        transform: scale(1);
+        -o-transform: scale(1);       
+        transform: scale(1);       
     }
-
+    
     to {
         opacity: 0;
         -o-transform: scale(0);
@@ -2461,9 +2517,9 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 @keyframes testim-hide {
     from {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1);       
     }
-
+    
     to {
         opacity: 0;
         transform: scale(0);
@@ -2483,7 +2539,7 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
   .testim .arrow {
     font-size: 1.5em;
   }
-
+  
   .testim .cont div p {
     line-height: 25px;
   }
