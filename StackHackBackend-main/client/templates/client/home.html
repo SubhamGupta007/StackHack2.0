@@ -71,9 +71,8 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                         -->
                             <li ><a href={% url 'menu/' %}>Menu</a></li>
-                            <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
-                            <li class="scroll-to-section"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-
+                           
+                          
 
 
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
@@ -121,11 +120,14 @@ https://templatemo.com/tm-558-klassy-cafe
                       <div class="flip-container">
                         <div class="flipper" id="flipper">
                             <div class="front">
-                                  <h1 class="title">Klassy Cafe</h1>
+                                 <h1 class="title">Klassy Cafe</h1>
                                   <p>The best coffee experience</p>
                                   <br>
                                   <br>
                                   <a class="flipbutton" id="loginButton" href="#">Click To Register</a>
+                                  <br>
+                                  <br>
+                                  <a class="flipbutton" id="logButton" href="#">Click To login</a>
                             </div>
 
                        <div class="back">
@@ -181,33 +183,24 @@ https://templatemo.com/tm-558-klassy-cafe
 
     <!-- ***** About Area Starts ***** -->
     <section class="section" id="about">
+      <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>We Leave A Delicious Memory For You</h2>
+                        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>About Us</h6>
-                            <h2>We Leave A Delicious Memory For You</h2>
-                        </div>
+                        
                         <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="{% static 'client/images/about-thumb-01.jpg' %}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="{% static 'client/images/about-thumb-02.jpg' %}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="{% static 'client/images/about-thumb-03.jpg' %}" alt="">
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="right-content">
                         <div class="thumb">
                             <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
-                            <img src="{% static 'client/images/about-video-bg.jpg' %}" alt="">
+                            <img src="assets/images/about-video-bg.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -966,12 +959,17 @@ https://templatemo.com/tm-558-klassy-cafe
 
     </script>
     <script>
-  var loginButton = document.getElementById("loginButton");
+   var loginButton = document.getElementById("loginButton");
+  var logButton = document.getElementById("logButton");
 var registerButton = document.getElementById("registerButton");
 
 loginButton.onclick = function(){
   document.querySelector("#flipper").classList.toggle("flip");
 }
+logButton.onclick = function(){
+  document.querySelector("#flipper").classList.toggle("flip");
+}
+
 
 registerButton.onclick = function(){
   document.querySelector("#flipper").classList.toggle("flip");
