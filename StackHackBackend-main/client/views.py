@@ -12,6 +12,8 @@ from django.contrib import messages
 
 def home(request):
     return(render(request, "client/home.html", {}))
+def menu(request):
+    return(render(request, "client/menu.html", {}))
 
 def LoginPage(request):
     form = LoginForm(request.POST or None)
