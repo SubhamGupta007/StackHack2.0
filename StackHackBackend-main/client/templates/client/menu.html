@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
   <head>
 
     <meta charset="utf-8">
@@ -9,37 +9,41 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
     <title>Klassy Cafe </title>
 <!--
-    
+
 TemplateMo 558 Klassy Cafe
 
 https://templatemo.com/tm-558-klassy-cafe
 
 -->
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'client/css/bootstrap.min.css'  %}">
 
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'client/css/font-awesome.css'  %}">
 
-    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="{% static 'client/css/menu.css' %}">
 
-    <link rel="stylesheet" href="assets/css/lightbox.css">
-        <!-- Fancybox slider -->
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="{% static 'client/css/owl-carousel.css'  %}">
+
+    <link rel="stylesheet" href="{% static 'client/css/owl-carousel.css'  %}">
 
     </head>
-    
+
     <body>
-    
+
     <!-- ***** Preloader Start ***** -->
-      
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <!-- ***** Preloader End ***** -->
-    
-    
+
+
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -47,15 +51,16 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="assets/images/klassy-logo.png"  align="klassy cafe html template">
+                        <a href="home.html" class="logo">
+                            <img src="{% static 'client/images/klassy-logo.png' %}"  align="klassy cafe html template">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            
-                        <!-- 
+                            <li class="scroll-to-section"><a href="#top">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+
+                        <!--
                             <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
                                 <ul>
@@ -65,12 +70,21 @@ https://templatemo.com/tm-558-klassy-cafe
                                 </ul>
                             </li>
                         -->
-                            <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                           
+                            <li class="scroll-to-section"><a href="#menu" class="active">Menu</a></li>
+                            <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
                             <li class="scroll-to-section"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                            <li class="submenu">
+                                <a href="javascript:">Features</a>
+                                <ul>
+                                    <li><a href="#">Features Page 1</a></li>
+                                    <li><a href="#">Features Page 2</a></li>
+                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a href="#">Features Page 4</a></li>
+                                </ul>
+                            </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
-                        </ul>        
+                            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
+                        </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
@@ -88,9 +102,9 @@ https://templatemo.com/tm-558-klassy-cafe
 
   <div class="modal-dialog">
     <div class="loginmodal-container">
-      
+
       <h1>Login to Your Account</h1><br>
-      
+
       <form>
         <input type="text" name="user" placeholder="Username">
         <input type="password" name="pass" placeholder="Password">
@@ -99,14 +113,15 @@ https://templatemo.com/tm-558-klassy-cafe
 
       <div class="login-help">
         <a href="#">Join</a> - <a href="#">Forgot Password</a>
-      </div>        
-    
+      </div>
+
     </div>
    </div>
 
 </div>
     <!-- **** Login popup ends **** -->
-    <!-- **** Menu items start **** -->
+
+     <!-- **** Menu items start **** -->
    <section id="our_menu" class="pt-5 pb-5">
     <div class="container">
       <div class="row">
@@ -326,36 +341,65 @@ https://templatemo.com/tm-558-klassy-cafe
             </div>
           </div>
         </div>
-       
+
       </div>
     </div>
   </section>
     <!-- **** Menu items ends ***** -->
-<!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="home.html"><img src="{% static 'client/images/white-logo.png' %}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© Copyright Klassy Cafe Co.
+
+                        <br>Design: TemplateMo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'client/js/jquery-2.1.0.min.js' %}"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'client/js/popper.js' %}"></script>
+    <script src="{% static 'client/js/bootstrap.min.js' %}"></script>
 
     <!-- Plugins -->
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/accordions.js"></script>
-    <script src="assets/js/datepicker.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/slick.js"></script> 
-    <script src="assets/js/lightbox.js"></script> 
-    <script src="assets/js/isotope.js"></script> 
-    <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
-    <!-- Mixit slider -->
-  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
-    
+    <script src="{% static 'client/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'client/js/accordions.js' %}"></script>
+    <script src="{% static 'client/js/datepicker.js' %}"></script>
+    <script src="{% static 'client/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'client/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'client/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'client/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'client/js/slick.js' %}"></script>
+    <script src="{% static 'client/js/lightbox.js' %}"></script>
+    <script src="{% static 'client/js/isotope.js' %}"></script>
+
     <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
-     <script>
+    <script src="{% static 'client/js/custom.js' %}"></script>
+    <script>
 
         $(function() {
             var selectedClass = "";
@@ -367,9 +411,22 @@ https://templatemo.com/tm-558-klassy-cafe
               $("."+selectedClass).fadeIn();
               $("#portfolio").fadeTo(50, 1);
             }, 500);
-                
+
             });
         });
 
     </script>
+    <script>
+  var loginButton = document.getElementById("loginButton");
+var registerButton = document.getElementById("registerButton");
+
+loginButton.onclick = function(){
+  document.querySelector("#flipper").classList.toggle("flip");
+}
+
+registerButton.onclick = function(){
+  document.querySelector("#flipper").classList.toggle("flip");
+}
+  </script>
   </body>
+</html>
