@@ -181,20 +181,19 @@ header
 */
 
 .background-header {
-   background-color: #772f1a;
-background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+   
 
   height: 80px!important;
   position: fixed!important;
   top: 0px;
   left: 0px;
   right: 0px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  
 }
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color:#FAB348!important;
+  color:#000!important;
 }
 
 .background-header .main-nav .nav li:hover a {
@@ -490,7 +489,7 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }
 
 .header-area.header-sticky {
-
+  position: fixed;
   min-height: 80px;
 }
 
@@ -499,7 +498,7 @@ background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #fb5849;
+  color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -987,4 +986,81 @@ i{
   .example{
     padding-left: 18%;
   }
+}
+
+
+
+
+
+/* 
+---------------------------------------------
+footer
+--------------------------------------------- 
+*/
+
+footer {
+  margin-top: 60px;
+  padding: 50px 0px;
+   background-color: #772f1a;
+background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+
+}
+
+footer .left-text-content p {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 14px;
+  text-align: right;
+}
+
+footer .right-text-content p {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+
+footer .right-text-content {
+  text-align: left;
+  margin-top: 10px;
+}
+
+footer .logo {
+  text-align: center;
+}
+
+footer .right-text-content ul li {
+  display: inline-block;
+  margin-left: 15px;
+  align-items: center;
+
+}
+footer .right-text-content ul li i{
+  align-items: center;
+  padding-left: 7px;
+}
+footer .right-text-content ul li:first-child {
+  margin-left: 0px;
+}
+
+
+footer .right-text-content ul li a {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  font-size: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  color:#FAB348;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+footer .right-text-content ul li a:hover {
+  color: #2a2a2a;
 }
